@@ -1,4 +1,4 @@
-package pl.graczyk.trainingassistant.bodypart;
+package pl.graczyk.trainingassistant.domain.bodypart;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

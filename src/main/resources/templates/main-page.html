@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>TrainingAssistant</title>
@@ -7,8 +9,8 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==
-        " crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -17,21 +19,22 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
           rel="stylesheet">
-    <script defer src="../static/scripts/common.js"></script>
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
     <link rel="stylesheet"
-          href="../static/styles/main.css">
+          href="../static/styles/main.css " th:href="@{/styles/main.css}">
 </head>
 <body>
 <div class="container">
     <ul class="menu">
 
-        <li class="menu-logo-container"><a href="#"><i class="fa-solid fa-dumbbell"></i>
+        <li class="menu-logo-container">
+            <a href="#"th:href="@{/}"><i class="fa-solid fa-dumbbell"></i>
                TrainingAssistant
 </a>
 </li>
 <li class="menu-toggle"> <a href="#"><i id="toggle-icon" class="far fa-plus-square"></i></a></li>
+<li class="menu-item"><a href="#">Podział na partie</a></li>
 <li class="menu-item"><a href="#">Ćwiczenia</a></li>
-<li class="menu-item"><a href="#">Kalkulator kalorii</a></li>
         <li class="menu-item"><a href="#">Zaloguj się</a></li></ul>
 
     <header class="jumbotron">
@@ -41,6 +44,53 @@
     </p></header>
 
 
-    <main class="main-content"></main>
+    <main class="main-content">
+        <h2 class="list-heading" th:text="${heading}">
+            Promowane / Nazwa Kategorii</h2>
+
+        <p class="list-description" th:text="${description}">
+            Opis sekcji</p>
+        <ul class="exercise-list" th:remove="all-but-first">
+            <li class="exercise-list-item" th:each="exercise: ${exercises}">
+                <a href="#" th:href="@{|/exercise/${exercise.id}|}">
+                <img src="../static/img/img.png" th:src="@{/img/img.png}"
+                             alt="nazwa ćwiczenia"
+                             class="exercise-list-item-poster">
+            </a><div class="exercise-list-item-card">
+            <div class="exercise-list-item-content">
+                <h3 class="exercise-list-item-title">
+                    <a href="#" th:href="@{|/exercise/${exercise.id}|}" th:text="${exercise.name}">
+                    nazwa</a></h3>
+                <h4 th:text="${exercise.levelOfAdvancement}">poziom zaawansowania</h4>
+                <p th:text="${exercise.equipment}">sprzęt</p></div></div></li>
+
+<li class="exercise-list-item"> <a href="#">
+    <img src="../static/img/img.png"
+         alt="nazwa ćwiczenia"
+         class="exercise-list-item-poster"></a>
+    <div class="exercise-list-item-card">
+        <div class="exercise-list-item-content">
+            <h3 class="exercise-list-item-title">
+                <a href="#">nazwa</a>
+            </h3><h4>poziom zaawansowania</h4>
+            <p>sprzęt</p></div>
+
+        </div></li>
+            <li class="exercise-list-item"> <a href="#">
+            <img src="../static/img/img.png"
+                 alt="nazwa ćwiczenia"
+                 class="exercise-list-item-poster"></a>
+            <div class="exercise-list-item-card">
+                <div class="exercise-list-item-content">
+                    <h3 class="exercise-list-item-title">
+                        <a href="#">nazwa</a>
+                    </h3><h4>poziom zaawansowania</h4>
+                    <p>sprzęt</p></div>
+                </div></li>
+</ul>
+
+    </main>
+
+
     <footer class="footer"><p>TrainingAssistant 2022
         </p></footer></div></body></html>

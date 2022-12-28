@@ -1,8 +1,8 @@
-package pl.graczyk.trainingassistant.exercise;
+package pl.graczyk.trainingassistant.domain.exercise;
 
 
 import jakarta.persistence.*;
-import pl.graczyk.trainingassistant.bodypart.Bodypart;
+import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 
 @Entity public class Exercise {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,6 +10,8 @@ import pl.graczyk.trainingassistant.bodypart.Bodypart;
     private String name;
     private String levelOfAdvancement;
     private String equipment;
+
+    private boolean recommended;
 
     @ManyToOne @JoinColumn(name = "bodypart_id",
     referencedColumnName = "id")
@@ -31,6 +33,7 @@ import pl.graczyk.trainingassistant.bodypart.Bodypart;
     public void setName(String name) {
         this.name = name;
     }
+
 
     public String getLevelOfAdvancement() {
         return levelOfAdvancement;
@@ -56,4 +59,11 @@ import pl.graczyk.trainingassistant.bodypart.Bodypart;
         this.bodypart = bodypart;
     }
 
+    public boolean isRecommended() {
+        return recommended;
+    }
+
+    public void setRecommended(boolean recommended) {
+        this.recommended = recommended;
+    }
 }

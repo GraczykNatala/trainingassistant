@@ -2,18 +2,19 @@ package pl.graczyk.trainingassistant.exercise;
 
 
 import jakarta.persistence.*;
-import pl.graczyk.trainingassistant.equipment.Equipment;
+import pl.graczyk.trainingassistant.bodypart.Bodypart;
 
 @Entity public class Exercise {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String levelOfAdvancement;
+    private String equipment;
 
-    @ManyToOne @JoinColumn(name = "equipment_id",
+    @ManyToOne @JoinColumn(name = "bodypart_id",
     referencedColumnName = "id")
-    private Equipment equipment;
-    private boolean recommended;
+    private Bodypart bodypart;
+
 
     public Long getId() {
         return id;
@@ -39,19 +40,20 @@ import pl.graczyk.trainingassistant.equipment.Equipment;
         this.levelOfAdvancement = levelOfAdvancement;
     }
 
-    public boolean isRecommended() {
-        return recommended;
-    }
-
-    public void setRecommended(boolean recommended) {
-        this.recommended = recommended;
-    }
-
-    public Equipment getEquipment() {
+    public String getEquipment() {
         return equipment;
     }
 
-    public void setEquipment(Equipment equipment) {
+    public void setEquipment(String equipment) {
         this.equipment = equipment;
     }
+
+    public Bodypart getBodypart() {
+        return bodypart;
+    }
+
+    public void setBodypart(Bodypart bodypart) {
+        this.bodypart = bodypart;
+    }
+
 }

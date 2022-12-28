@@ -2,31 +2,31 @@
 
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                            https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
 
 
     <changeSet id="0001-1"
                author="trAs">
         <createTable tableName="exercise">
-         <column name="id"
-                 type="BIGINT"
-                 autoIncrement="true">
-             <constraints nullable="false"
-                          primaryKey="true" />
-         </column>
+            <column name="id"
+                    type="BIGINT"
+                    autoIncrement="true">
+                <constraints nullable="false"
+                             primaryKey="true" />
+            </column>
             <column name ="name"
                     type="VARCHAR(100)"/>
             <column name = "level_of_advancement"
                     type="VARCHAR(100)"/>
-            <column name = "recommended"
-                    type="BOOLEAN"/>
-            <column name ="equipment_id"
+            <column name = "equipment"
+                    type="VARCHAR(100)"/>
+            <column name ="bodypart_id"
                     type="BIGINT">
                 <constraints nullable="false"
-                             foreignKeyName="fk_exercise_equipment"
-                             referencedTableName="equipment"
+                             foreignKeyName="fk_exercise_bodypart"
+                             referencedTableName="bodypart"
                              referencedColumnNames="id"/>
             </column>
         </createTable>

@@ -9,6 +9,9 @@ import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
     private String name;
     private String levelOfAdvancement;
     private String equipment;
+    private String describtion;
+    private String youtubeId;
+
 
     private boolean recommended;
 
@@ -64,5 +67,21 @@ import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 
     public void setRecommended(boolean recommended) {
         this.recommended = recommended;
+    }
+
+    public String getDescribtion() {
+        return describtion;
+    }
+
+    public void setDescribtion(String describtion) {
+        this.describtion = describtion;
+    }
+
+    public String getYoutubeId() {
+        return youtubeId;
+    }
+
+    public void setYoutubeId(String youtubeId) {
+        this.youtubeId = youtubeId;
     }
 }

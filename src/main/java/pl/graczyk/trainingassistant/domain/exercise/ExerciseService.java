@@ -17,4 +17,6 @@ public class ExerciseService {
                 .map(ExerciseDtoMapper::map)
                 .toList();
     }
+
+
 }

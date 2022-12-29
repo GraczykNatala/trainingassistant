@@ -9,6 +9,8 @@ public class ExerciseDtoMapper {
                 exercise.getName(),
                 exercise.getLevelOfAdvancement(),
                 exercise.getEquipment(),
+                exercise.getDescribtion(),
+                exercise.getYoutubeId(),
                 exercise.getBodypart().getName(),
                 exercise.isRecommended()
 

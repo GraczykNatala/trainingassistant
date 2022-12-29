@@ -22,6 +22,10 @@
                     type="VARCHAR(100)"/>
             <column name = "equipment"
                     type="VARCHAR(100)"/>
+            <column name="describtion"
+                    type="VARCHAR(5000)"/>
+            <column name="youtube_id"
+                    type=" VARCHAR(30)"/>
             <column name = "recommended"
                     type="boolean"/>
             <column name ="bodypart_id"

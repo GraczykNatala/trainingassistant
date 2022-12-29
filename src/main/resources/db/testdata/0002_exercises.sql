@@ -1,10 +1,10 @@
-insert into exercise (name, level_of_advancement, equipment, recommended, bodypart_id)
-values ('Pull ups', 'intermediate', 'other',true, 5);
-insert into exercise (name, level_of_advancement,  equipment, recommended, bodypart_id)
-values ('Dumbell curl', 'beginner', 'dumbbells', false, 3);
-insert into exercise (name, level_of_advancement, equipment,recommended, bodypart_id)
-values ('curl', 'beginner', 'barbell',true, 3);
-insert into exercise (name, level_of_advancement, equipment,recommended, bodypart_id)
-values ('dumbbell Romanian Deadlift', 'intermediate', 'dumbbells',false, 6);
-insert into exercise (name, level_of_advancement, equipment,recommended, bodypart_id)
-values ('crunch', 'intermediate', 'bands',false, 7);
+insert into exercise (name, level_of_advancement, equipment,describtion, youtube_id, recommended, bodypart_id)
+values ('Pull ups', 'intermediate', 'other', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae, eleifend a justo. Maecenas tortor erat, tempor interdum felis sed, hendrerit sodales arcu. Mauris fringilla tempor tortor, eget tristique nibh. Sed varius dignissim condimentum. Donec vulputate suscipit porta. Ut efficitur luctus efficitur. Fusce dolor nisl, aliquam nec neque et, lacinia blandit nunc. Quisque scelerisque neque nec ligula rutrum, sit amet ultrices nisi sagittis','V75dMMIW2B4',true, 5);
+insert into exercise (name, level_of_advancement,  equipment,describtion, youtube_id, recommended, bodypart_id)
+values ('Dumbell curl', 'beginner', 'dumbbells','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae, eleifend a justo. Maecenas tortor erat, tempor interdum felis sed, hendrerit sodales arcu. Mauris fringilla tempor tortor, eget tristique nibh. Sed varius dignissim condimentum. Donec vulputate suscipit porta. Ut efficitur luctus efficitur. Fusce dolor nisl, aliquam nec neque et, lacinia blandit nunc. Quisque scelerisque neque nec ligula rutrum, sit amet ultrices nisi sagittis','V75dMMIW2B4', false, 3);
+insert into exercise (name, level_of_advancement, equipment,describtion, youtube_id,recommended, bodypart_id)
+values ('curl', 'beginner', 'barbell','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae, eleifend a justo. Maecenas tortor erat, tempor interdum felis sed, hendrerit sodales arcu. Mauris fringilla tempor tortor, eget tristique nibh. Sed varius dignissim condimentum. Donec vulputate suscipit porta. Ut efficitur luctus efficitur. Fusce dolor nisl, aliquam nec neque et, lacinia blandit nunc. Quisque scelerisque neque nec ligula rutrum, sit amet ultrices nisi sagittis','73wK945elrU',true, 3);
+insert into exercise (name, level_of_advancement, equipment,describtion, youtube_id,recommended, bodypart_id)
+values ('dumbbell Romanian Deadlift', 'intermediate', 'dumbbells','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae, eleifend a justo. Maecenas tortor erat, tempor interdum felis sed, hendrerit sodales arcu. Mauris fringilla tempor tortor, eget tristique nibh. Sed varius dignissim condimentum. Donec vulputate suscipit porta. Ut efficitur luctus efficitur. Fusce dolor nisl, aliquam nec neque et, lacinia blandit nunc. Quisque scelerisque neque nec ligula rutrum, sit amet ultrices nisi sagittis','V75dMMIW2B4',false, 6);
+insert into exercise (name, level_of_advancement, equipment,describtion, youtube_id,recommended, bodypart_id)
+values ('crunch', 'intermediate', 'bands', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae, eleifend a justo. Maecenas tortor erat, tempor interdum felis sed, hendrerit sodales arcu. Mauris fringilla tempor tortor, eget tristique nibh. Sed varius dignissim condimentum. Donec vulputate suscipit porta. Ut efficitur luctus efficitur. Fusce dolor nisl, aliquam nec neque et, lacinia blandit nunc. Quisque scelerisque neque nec ligula rutrum, sit amet ultrices nisi sagittis','aWzlQ2N6qqg',false, 7);

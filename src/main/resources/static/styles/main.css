@@ -13,14 +13,14 @@ a{
     color: #FF5733;
 }
 .container{
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: #424242;
-  }
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #424242;
+}
 .main-content{
-      flex: 1;
-  }
+    flex: 1;
+}
 
 .fa-dumbbell,
 #toggle-icon{
@@ -80,29 +80,53 @@ a{
 
 }
 .jumbotron{
-    background-image: url("../img/jumbotron.png") ;
-    height: 200px;
+    background-image: url("../img/jumbotron.png");
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem;
     text-align: center;
-
 }
-.jumbotron  image{
-    width: 100%;
-    padding-top: 56.25%;
-    display: block;
-
-}
-
 .jumbotron-header{
     font-size: 3rem;
     margin: 1rem;
-    opacity: 100%;
 }
 .jumbotron-description{
     font-size: 1.2rem;
-    font-weight: bold;
-
 }
 
+.list-heading,
+.list-description {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.movie-list {
+    list-style-type: none;
+}
+
+.movie-list-item {
+    margin-bottom: 16px;
+    display: flex;
+    border: 1px #6d6d6d solid;
+}
+
+.movie-list-item-poster {
+    display: block;
+    max-width: 200px;
+}
+
+.movie-list-item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+.movie-list-item-content > * {
+    margin: 8px 0;
+}
+.movie-list-item-title {
+    font-size: 1.6rem;
+}
+.movie-list-item-rating {
+    font-size: 1.6rem;
+}

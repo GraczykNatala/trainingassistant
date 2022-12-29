@@ -1,6 +1,5 @@
 package pl.graczyk.trainingassistant.domain.exercise;
 
-
 import jakarta.persistence.*;
 import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 
@@ -14,7 +13,7 @@ import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
     private boolean recommended;
 
     @ManyToOne @JoinColumn(name = "bodypart_id",
-    referencedColumnName = "id")
+            referencedColumnName = "id")
     private Bodypart bodypart;
 
 

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 
@@ -17,6 +18,8 @@ public class ExerciseService {
                 .map(ExerciseDtoMapper::map)
                 .toList();
     }
-
+    public Optional<ExerciseDto> findExerciseById(long id) {
+        return exerciseRepository.findById(id).map(ExerciseDtoMapper::map);
+    }
 
 }

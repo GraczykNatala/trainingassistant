@@ -5,7 +5,8 @@
       layout:decorate="~{layout}">
 
 <head>
-    <title>Ćwiczenia - TrainingAssistant</title>
+    <title th:text="|${exercise.name} - TrainingAssistant|">
+        Ćwiczenia - TrainingAssistant</title>
 </head>
 
 <body>
@@ -14,19 +15,24 @@
         <section class = "exercise">
             <div class = "exercise-summary">
                 <img src="../static/img/poster-placeholder.png"
+                     th:src="@{/img/poster-placeholder.png}"
                      alt=" nazwa ćwiczenia"
+                     th:alt="${exercise.name}"
                      class = "exercise-summary-cover"/>
                 <div class = "exercise-summary-info">
-                    <h1 class="exercise-summary-name"> Podciąganie</h1>
-                    <p class="exercise-summary-level-of-advancement">początkujący</p>
-                    <p class ="exercise-summary-item">hantle</p>
-                    <p class="exercise-summary-item"> Partia <a href="#">Plecy</a></p>
-                    <p class = "exercise-summary-item">opis wstawić</p>
+                    <h1 class="exercise-summary-name" th:text ="${exercise.name}"> Podciąganie</h1>
+                    <p class="exercise-summary-level-of-advancement" th:text = "${exercise.levelOfAdvancement}">początkujący</p>
+                    <p class ="exercise-summary-item" th:text="${exercise.equipment}">hantle</p>
+                    <p class="exercise-summary-item"> Partia
+                        <a href="#" th:href="@{|/partia/${exercise.bodypart}|}"
+                        th:text="${exercise.bodypart}">Plecy</a></p>
+                    <p class = "exercise-summary-item" th:text="${exercise.description}">opis wstawić</p>
                 </div></div>
             <section class="exercise-movie-container movie-section">
                 <h2 class="exercise-section-heading">Wykonanie</h2>
                 <iframe width="560" height="315" class="exercise-movie"
                         src="https://www.youtube.com/watch?v=oBEJsuQIcD0&ab_channel=MuscleWiki"
+                        th:src="|https://www.youtube.com/embed/${exercise.youtubeId}|"
                          allow="autoplay; encrypted-media" allowfullscreen>
 
                 </iframe>

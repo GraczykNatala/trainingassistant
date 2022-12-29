@@ -100,33 +100,73 @@ a{
     margin: 16px 0;
 }
 
-.movie-list {
+.exercise-list {
     list-style-type: none;
 }
 
-.movie-list-item {
+.exercise-list-item {
     margin-bottom: 16px;
     display: flex;
     border: 1px #6d6d6d solid;
 }
 
-.movie-list-item-poster {
+.exercise-list-item-poster {
     display: block;
     max-width: 200px;
 }
 
-.movie-list-item-card {
+.exercise-list-item-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
 }
-.movie-list-item-content > * {
+.exercise-list-item-content > * {
     margin: 8px 0;
 }
-.movie-list-item-title {
+.exercise-list-item-name {
     font-size: 1.6rem;
 }
-.movie-list-item-rating {
+.exercise-list-item-rating {
     font-size: 1.6rem;
 }
+
+.exercise-summary{
+    display: flex;
+    margin-top: 16px;
+}
+.exercise-summary-cover{
+    object-fit: contain;
+    max-width: 200px;
+}
+.exercise-summary-info{
+    margin-left: 16px;
+}
+.exercise-summary-summary-level-of-advancement{
+    color: #9e9e9e;
+    margin-bottom: 16px;
+}
+.exercise-summary-item{
+    margin: 8px;
+}
+.exercise-summary-name{
+    font-size: 2rem;
+}
+.exercise-section-heading{
+    margin-bottom: 8px;
+}
+.exercise-movie{
+    display: block;
+    margin: auto;
+}
+.movie-section{
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px #6d6d6d solid;
+}
+
+
+
+
+
+

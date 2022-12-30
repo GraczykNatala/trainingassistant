@@ -1,5 +1,6 @@
 package pl.graczyk.trainingassistant.domain.bodypart;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import pl.graczyk.trainingassistant.domain.bodypart.dto.BodypartDto;
 
@@ -23,5 +24,12 @@ public class BodypartService {
                 .spliterator(),false)
                 .map(BodypartDtoMapper::map)
                 .toList();
+    }
+    @Transactional
+    public void addBodypart(BodypartDto bodypart){
+        Bodypart bodypartToSave = new Bodypart();
+        bodypartToSave.setName(bodypart.getName());
+        bodypartToSave.setDescribtion(bodypart.getDescribtion());
+        bodypartRepository.save(bodypartToSave);
     }
 }

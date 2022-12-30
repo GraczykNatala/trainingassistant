@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl"
+xmlns:th="https://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Dodawanie nowej partii</title>
+
+</head>
+<body>
+<main class="main-content" layout:fragment="content">
+    <h2 class="list-heading">Dodaj nową partię</h2>
+    <form action="" method="post" class="mc-form"
+          th:object="${bodypart}">
+        <label for="bodypartName">Nazwa</label>
+        <input type="text" id="bodypartName" placeholder="partia mięśniowa" th:field="*{name}">
+        <label for="bodypartDescription">Opis partii </label>
+        <textarea id="bodypartDescription" rows="5" th:field="*{describtion}"></textarea>
+        <button type="submit"> Dodaj</button>
+    </form>
+</main>
+</body>
+</html>

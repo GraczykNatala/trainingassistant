@@ -187,7 +187,36 @@ a{
     padding: 16px;
     text-align: center;
 }
+textarea {
+    font-family: inherit;
+}
+.mc-form{
+    display: flex;
+    flex-direction: column;
+    margin: 032px;
+}
 
+.mc-form > * {
+    margin-top: 8px;
+}
+.mc-form > input,
+.mc-form > textarea,
+.mc-form > button {
+    font-size: 1.2rem;
+    color: black;
+    padding: 8px;
+}
+.mc-form > button {
+    margin-top: 16px;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+}
+.notification-bar {
+    text-align: center;
+    background-color: #FF5733 ;
+    padding: 8px;
+}
 
 
 

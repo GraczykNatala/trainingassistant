@@ -5,6 +5,10 @@ public class BodypartDto {
     private String name;
     private String describtion;
 
+
+    public BodypartDto(){
+
+    }
     public BodypartDto(Long id, String name, String describtion) {
         this.id = id;
         this.name = name;

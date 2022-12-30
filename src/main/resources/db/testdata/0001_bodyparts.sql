@@ -1,7 +1,14 @@
-insert into bodypart (name) values('Quads');
-insert into bodypart (name) values('Calves');
-insert into bodypart (name) values('Biceps');
-insert into bodypart (name) values('Triceps');
-insert into bodypart (name) values('Lats');
-insert into bodypart (name) values('Glutes');
-insert into bodypart (name) values('Abs');
+insert into bodypart (name, describtion)
+values('Quads', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Calves', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Biceps', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Triceps', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Lats', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Glutes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');
+insert into bodypart (name, describtion)
+values('Abs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien turpis, imperdiet non tincidunt vitae,');

@@ -19,6 +19,8 @@
                     type="VARCHAR(100)">
                 <constraints unique="true"/>
             </column>
+            <column name = "describtion"
+                    type = "VARCHAR(500)"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>

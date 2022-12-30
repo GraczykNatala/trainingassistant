@@ -10,6 +10,7 @@ public class Bodypart {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String describtion;
 
     public Long getId() {
         return id;
@@ -25,5 +26,13 @@ public class Bodypart {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescribtion() {
+        return describtion;
+    }
+
+    public void setDescribtion(String describtion) {
+        this.describtion = describtion;
     }
 }

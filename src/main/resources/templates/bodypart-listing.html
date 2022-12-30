@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Partie - trainingAssistant</title>
+</head>
+<body>
+<main class="main-content"
+      layout:fragment="content">
+    <h2 class="list-heading">Partie mięśniowe</h2>
+    <p class="list-describtion">Lista partii</p>
+    <u class="list-border">
+        <li th:each="bodypart:${bodyparts}">
+            <a th:href="@{|/partia/${bodypart.name}|}"
+               th:text="${bodypart.name}">Brzuch</a>
+        </li>
+    </u>
+</main>
+</body>
+</html>

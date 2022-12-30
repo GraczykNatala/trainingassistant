@@ -1,10 +1,12 @@
 package pl.graczyk.trainingassistant.domain.exercise;
 
 import org.springframework.stereotype.Service;
+import pl.graczyk.trainingassistant.domain.bodypart.dto.BodypartDto;
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.StreamSupport;
 
 @Service
 
@@ -27,4 +29,5 @@ public class ExerciseService {
                 .map(ExerciseDtoMapper::map)
                 .toList();
     }
+
 }

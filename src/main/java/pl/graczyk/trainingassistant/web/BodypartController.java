@@ -33,4 +33,10 @@ public class BodypartController {
         model.addAttribute("exercises", exercises);
         return "main-page";
     }
+    @GetMapping("/partie")
+    public String getBodypartList(Model model){
+        List<BodypartDto> bodyparts = bodypartService.findAllBodyparts();
+        model.addAttribute("bodyparts", bodyparts);
+        return "bodypart-listing";
+    }
 }

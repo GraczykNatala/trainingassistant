@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ExerciseRepository extends CrudRepository<Exercise, Long> {
     List<Exercise> findAllByRecommendedIsTrue();
+    List<Exercise> findAllByBodypart_NameIgnoreCase(String bodypart);
 }

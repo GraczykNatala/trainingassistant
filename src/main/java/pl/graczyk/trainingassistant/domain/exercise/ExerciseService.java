@@ -21,5 +21,10 @@ public class ExerciseService {
     public Optional<ExerciseDto> findExerciseById(long id) {
         return exerciseRepository.findById(id).map(ExerciseDtoMapper::map);
     }
-
+    public List<ExerciseDto> findExercisesByBodypart(String bodybpart){
+        return exerciseRepository.findAllByBodypart_NameIgnoreCase(bodybpart)
+                .stream()
+                .map(ExerciseDtoMapper::map)
+                .toList();
+    }
 }

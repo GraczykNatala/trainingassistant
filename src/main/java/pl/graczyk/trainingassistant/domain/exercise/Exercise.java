@@ -84,4 +84,6 @@ import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
     public void setYoutubeId(String youtubeId) {
         this.youtubeId = youtubeId;
     }
+
+
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl"
       xmlns:th="https://www.thymeleaf.org"
-       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
 <head>
@@ -25,7 +25,7 @@
                     <p class ="exercise-summary-item" th:text="${exercise.equipment}">hantle</p>
                     <p class="exercise-summary-item"> Partia
                         <a href="#" th:href="@{|/partia/${exercise.bodypart}|}"
-                        th:text="${exercise.bodypart}">Plecy</a></p>
+                           th:text="${exercise.bodypart}">Plecy</a></p>
                     <p class = "exercise-summary-item" th:text="${exercise.description}">opis wstawić</p>
                 </div></div>
             <section class="exercise-movie-container movie-section">
@@ -33,7 +33,7 @@
                 <iframe width="560" height="315" class="exercise-movie"
                         src="https://www.youtube.com/watch?v=oBEJsuQIcD0&ab_channel=MuscleWiki"
                         th:src="|https://www.youtube.com/embed/${exercise.youtubeId}|"
-                         allow="autoplay; encrypted-media" allowfullscreen>
+                        allow="autoplay; encrypted-media" allowfullscreen>
 
                 </iframe>
             </section>

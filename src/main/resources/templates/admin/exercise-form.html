@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Dodaj ćwiczenie</title>
+</head>
+<body>
+<main class="main-content" layout:fragment="content">
+   <h2 class = "list-heading">Dodaj ćwiczenie</h2>
+    <form action="" method="post" enctype="multipart/form-data"
+          class="mc-form" th:object="${exercise}">
+
+       <label for="name"> nazwa</label>
+        <input type="text" id="name" placeholder="..."
+               th:field="*{name}">
+
+        <label for="levelOfAdvancement"> Poziom zaawansowania</label>
+        <input type="text" id="levelOfAdvancement" placeholder="..."
+               th:field="*{levelOfAdvancement}">
+
+        <label for="equipment">potrzebny sprzęt/akcesoria</label>
+        <input type="text" id="equipment" placeholder="...
+"th:field="*{equipment}">
+
+        <label for="bodypart">Partia</label>
+        <select id="bodypart"
+                th:field="*{bodypart}"required>
+            <option value=""hidden>Wybierz partię</option>
+            <option th:each="bodypart: ${bodyparts}"th:value="${bodypart.name}"th:text="${bodypart.name}"></option></select>
+
+
+
+        <label for="recommended">rekomendowane?</label>
+        <input id="recommended"type="checkbox"
+               th:field="*{recommended}">
+
+
+        <label for="youtubeId">Identyfikator Youtube</label>
+        <input type="text" id="youtubeId" placeholder="..."
+        th:field="*{youtubeId}">
+
+
+
+        <label for="description">opis</label>
+        <textarea id="description" rows="10"
+                  th:field="*{description}">
+
+        </textarea><button type="submit">Dodaj</button>
+
+</form>
+
+</main>
+</body>
+</html>

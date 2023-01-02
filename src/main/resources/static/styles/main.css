@@ -217,6 +217,25 @@ textarea {
     background-color: #FF5733 ;
     padding: 8px;
 }
+.mc-form> input,
+.mc-form> textarea,
+.mc-form> button,
+.mc-form> select {
+    font-size: 1.2rem;
+    color: white;
+    padding: 8px;
+}
+.mc-form> select{
+    background-color: #424242;
+}
+
+.mc-form> input[type=checkbox]{
+    transform: scale(1.5);
+    margin-left: 5px;
+}
+.mc-form> input[type=file]{
+    color: white;
+}
 
 
 

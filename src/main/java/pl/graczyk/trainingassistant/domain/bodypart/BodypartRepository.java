@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-interface BodypartRepository extends CrudRepository<Bodypart, Long> {
+public interface BodypartRepository extends CrudRepository<Bodypart, Long> {
 
     Optional<Bodypart> findByNameIgnoreCase(String name);
 }

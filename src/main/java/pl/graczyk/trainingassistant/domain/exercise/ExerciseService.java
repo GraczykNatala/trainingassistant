@@ -1,6 +1,8 @@
 package pl.graczyk.trainingassistant.domain.exercise;
 
 import org.springframework.stereotype.Service;
+import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
+import pl.graczyk.trainingassistant.domain.bodypart.BodypartRepository;
 import pl.graczyk.trainingassistant.domain.bodypart.dto.BodypartDto;
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
 
@@ -12,8 +14,11 @@ import java.util.stream.StreamSupport;
 
 public class ExerciseService {
     private final ExerciseRepository exerciseRepository;
-    public ExerciseService(ExerciseRepository exerciseRepository){
+    private final BodypartRepository bodypartRepository;
+    public ExerciseService(ExerciseRepository exerciseRepository,
+                           BodypartRepository bodypartRepository){
         this.exerciseRepository = exerciseRepository;
+        this.bodypartRepository = bodypartRepository;
     }
     public List<ExerciseDto> findAllRecommended() {
         return exerciseRepository.findAllByRecommendedIsTrue().stream()
@@ -29,5 +34,18 @@ public class ExerciseService {
                 .map(ExerciseDtoMapper::map)
                 .toList();
     }
+        public void addExercise(ExerciseDto exerciseToSave) {
+        Exercise exercise = new Exercise();
+        exercise.setName(exercise.getName());
+        exercise.setLevelOfAdvancement(exercise.getLevelOfAdvancement());
+        exercise.setEquipment(exercise.getEquipment());
+         exercise.setDescribtion(exercise.getDescribtion());
+         exercise.setYoutubeId(exercise.getYoutubeId());
+         exercise.setRecommended(exercise.isRecommended());
+         Bodypart bodypart =
+                 bodypartRepository.findByNameIgnoreCase(exerciseToSave.getBodypart()).orElseThrow();
+            exercise.setBodypart(bodypart);
 
+            exerciseRepository.save(exercise);
+        }
 }

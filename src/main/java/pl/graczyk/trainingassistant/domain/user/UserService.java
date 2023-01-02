@@ -1,9 +1,11 @@
 package pl.graczyk.trainingassistant.domain.user;
 
+import org.springframework.stereotype.Service;
 import pl.graczyk.trainingassistant.domain.user.dto.UserCredentialsDto;
 
 import java.util.Optional;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 

@@ -7,7 +7,7 @@
                            https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
 
 
-    <changeSet id="0001-1"
+    <changeSet id="0002-1"
                author="trAs">
         <createTable tableName="exercise">
             <column name="id"

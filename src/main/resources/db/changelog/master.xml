@@ -9,6 +9,9 @@ https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
              relativeToChangelogFile="true"/>
     <include file="0002_create_table_exercise.xml"
              relativeToChangelogFile="true"/>
+    <include file="0003_create_tables_users_and_role.xml"
+             relativeToChangelogFile="true"/>
+
 
     <include file="../testdata/0001_bodyparts.sql"
              relativeToChangelogFile="true"
@@ -16,4 +19,8 @@ https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
     <include file="../testdata/0002_exercises.sql"
              relativeToChangelogFile="true"
              context="dev"/>
+    <include file="../testdata/0003_users_and_roles.sql"
+             relativeToChangelogFile="true"
+             context="dev"/>
+
 </databaseChangeLog>

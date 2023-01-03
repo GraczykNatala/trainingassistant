@@ -10,7 +10,6 @@ import org.springframework.web.server.ResponseStatusException;
 import pl.graczyk.trainingassistant.domain.exercise.ExerciseService;
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
 
-import java.util.Optional;
 
 @Controller
 public class ExerciseController {

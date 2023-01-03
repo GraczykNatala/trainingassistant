@@ -13,8 +13,15 @@ public class ExerciseDto {
 
     private boolean recommended;
 
+    public ExerciseDto(){
 
-    public ExerciseDto(Long id, String name, String levelOfAdvancement, String equipment,String description, String youtubeId, String bodypart, boolean recommended) {
+    }
+
+
+    public ExerciseDto(Long id, String name,
+                       String levelOfAdvancement, String equipment,
+                       String description, String youtubeId,
+                       String bodypart, boolean recommended) {
         this.id = id;
         this.name = name;
         this.levelOfAdvancement = levelOfAdvancement;
@@ -24,7 +31,7 @@ public class ExerciseDto {
         this.bodypart = bodypart;
         this.recommended = recommended;
     }
-    public ExerciseDto() {}
+
 
     public Long getId() {
         return id;

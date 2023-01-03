@@ -2,7 +2,7 @@ package pl.graczyk.trainingassistant.domain.exercise;
 
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
 
-public class ExerciseDtoMapper {
+ class ExerciseDtoMapper {
     static ExerciseDto map(Exercise exercise){
         return new ExerciseDto(
                 exercise.getId(),
@@ -12,9 +12,6 @@ public class ExerciseDtoMapper {
                 exercise.getDescribtion(),
                 exercise.getYoutubeId(),
                 exercise.getBodypart().getName(),
-                exercise.isRecommended()
-
-
-        );
+                exercise.isRecommended());
     }
 }

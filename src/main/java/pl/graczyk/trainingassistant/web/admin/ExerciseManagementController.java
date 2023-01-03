@@ -1,10 +1,9 @@
 package pl.graczyk.trainingassistant.web.admin;
-
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.graczyk.trainingassistant.domain.bodypart.BodypartService;
 import pl.graczyk.trainingassistant.domain.bodypart.dto.BodypartDto;
@@ -42,7 +41,7 @@ public class ExerciseManagementController {
                 AdminController.NOTIFICATION_ATTRIBUTE,
                 "Ćwiczenie %s zostało zapisane"
                         .formatted(exercise.getName()));
-                return "redirect:/admin";
+        return"redirect:/admin";
     }
 
 }

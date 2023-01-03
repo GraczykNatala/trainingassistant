@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 import pl.graczyk.trainingassistant.domain.bodypart.BodypartRepository;
 import pl.graczyk.trainingassistant.domain.exercise.dto.ExerciseDto;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -35,12 +34,12 @@ public class ExerciseService {
     }
         public void addExercise(ExerciseDto exerciseToSave) {
         Exercise exercise = new Exercise();
-        exercise.setName(exercise.getName());
-        exercise.setLevelOfAdvancement(exercise.getLevelOfAdvancement());
-        exercise.setEquipment(exercise.getEquipment());
-         exercise.setDescribtion(exercise.getDescribtion());
-         exercise.setYoutubeId(exercise.getYoutubeId());
-         exercise.setRecommended(exercise.isRecommended());
+        exercise.setName(exerciseToSave.getName());
+        exercise.setLevelOfAdvancement(exerciseToSave.getLevelOfAdvancement());
+        exercise.setEquipment(exerciseToSave.getEquipment());
+         exercise.setDescribtion(exerciseToSave.getDescription());
+         exercise.setYoutubeId(exerciseToSave.getYoutubeId());
+         exercise.setRecommended(exerciseToSave.isRecommended());
          Bodypart bodypart =
                  bodypartRepository.findByNameIgnoreCase(exerciseToSave.getBodypart()).orElseThrow();
             exercise.setBodypart(bodypart);

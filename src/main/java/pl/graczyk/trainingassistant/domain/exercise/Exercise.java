@@ -3,7 +3,8 @@ package pl.graczyk.trainingassistant.domain.exercise;
 import jakarta.persistence.*;
 import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 
-@Entity public class Exercise {
+@Entity
+public class Exercise {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
@@ -15,9 +16,8 @@ import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
 
     private boolean recommended;
 
-    @ManyToOne @JoinColumn(name = "bodypart_id",
-            referencedColumnName = "id")
-    private Bodypart bodypart;
+    @ManyToOne @JoinColumn(name ="bodypart_id",
+            referencedColumnName ="id")private Bodypart bodypart;
 
 
     public Long getId() {

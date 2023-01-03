@@ -4,10 +4,9 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-<head>
     <meta charset="UTF-8">
     <title>TrainingAssistant</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -30,20 +29,27 @@
     <ul class="menu">
 
         <li class="menu-logo-container">
-            <a href="#" th:href="@{/}"><i class="fa-solid fa-dumbbell"></i>
+            <a href="#" th:href="@{/}">
+                <i class="fa-solid fa-dumbbell"></i>
                 TrainingAssistant
-            </a></li>
-        <li class="menu-toggle"><a href="#"><i id="toggle-icon" class="far fa-plus-square"></i></a></li>
-        <li class="menu-item"><a href="#" th:href="@{/partie}">Podział na partie</a></li>
-        <li class="menu-item"><a href="#">Ćwiczenia</a></li>
-        <li class="menu-item" sec:authorize="hasAnyRole('ADMIN','EDITOR')">
-            <a href="#" th:href="@{/admin}">Panel administracyjny</a></li>
+            </a>
+        </li>
+        <li class="menu-toggle">
+            <a href="#"><i id="toggle-icon"
+                           class="far fa-plus-square"></i></a></li>
+        <li class="menu-item">
+            <a href="#" th:href="@{/partie}">Podział na partie</a></li>
+        <li class="menu-item">
+            <a href="#">Ćwiczenia</a></li>
+        <li class="menu-item" sec:authorize="hasRole('ADMIN')">
+            <a href="#" th:href="@{/admin}">Panel Administracyjny</a>
+        </li>
 
         <li class="menu-item">
-            <a href="#" th:href="@{/login}"
-               sec:authorize="!isAuthenticated()">Zaloguj się</a>
-            <a href="#" th:href="@{/logout}"
-               sec:authorize="isAuthenticated()">Wyloguj się</a>
+            <a href="#" sec:authorize="!isAuthenticated()" th:href="@{/login}"
+               >Zaloguj się</a>
+            <a href="#" sec:authorize="isAuthenticated()" th:href="@{/logout}"
+               >Wyloguj się</a>
         </li>
     </ul>
 

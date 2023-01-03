@@ -2,9 +2,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
-  h2:
-    console:
-      enabled: true
+  liquibase:
+    change-log: classpath:db/changelog/master.xml
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html

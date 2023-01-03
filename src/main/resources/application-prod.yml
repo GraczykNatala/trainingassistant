@@ -1,13 +1,13 @@
 spring:
   datasource:
-    url:  jdbc:mysql://localhost:3306/trainingassistant
+    url: jdbc:mysql://localhost:3306/trainingassistant
     username: root
-    password: admin
+    password: omnom444
   liquibase:
     contexts: prod
   web:
     resources:
       static-locations: classpath:/static/,file:/Users/Natala/uploads
-      app:
-        storage:
-          location: /Users/Natala/uploads
+app:
+  storage:
+    location: /Users/Natala/uploads

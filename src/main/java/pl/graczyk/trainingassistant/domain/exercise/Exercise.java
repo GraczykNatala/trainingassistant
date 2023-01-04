@@ -2,10 +2,7 @@ package pl.graczyk.trainingassistant.domain.exercise;
 
 import jakarta.persistence.*;
 import pl.graczyk.trainingassistant.domain.bodypart.Bodypart;
-import pl.graczyk.trainingassistant.domain.recordTracking.RecordTracking;
 
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 public class Exercise {
@@ -17,7 +14,7 @@ public class Exercise {
     private String describtion;
     private String youtubeId;
 
-@OneToMany(mappedBy = "exercise") private Set<RecordTracking> tracking = new HashSet<>();
+
     private boolean recommended;
 
     @ManyToOne @JoinColumn(name ="bodypart_id",
